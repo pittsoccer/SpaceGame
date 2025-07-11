@@ -1,0 +1,10 @@
+#gameBoard {
+  position: relative;
+}
+
+#gamePiece {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: grab;
+}
