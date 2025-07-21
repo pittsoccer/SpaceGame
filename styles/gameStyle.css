@@ -3,6 +3,10 @@
 
 #gameBoard {
   position: relative;
+  background-image: url("../images/SpaceBackground2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #gamePiece {
@@ -10,4 +14,35 @@
   left: 20px;
   top: 20px;
   cursor: grab;
+}
+
+#scoreBoxFixed {
+  position: fixed;
+  top: 20px;
+  /* distance from top of viewport */
+  right: 0;
+  /* stick to right edge */
+  width: 150px;
+  height: 90px;
+  background-color: #f8f9fa;
+  /* light bg to match */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1050;
+  /* ensure it's on top */
+}
+
+#scoreBoxFixed>div {
+  margin-right: 10px;
+  text-align: center;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: #24b50b;
+  /* background-color: #0C0A1F; */
+  background-color: #06040F;
 }
