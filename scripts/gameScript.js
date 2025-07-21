@@ -81,6 +81,7 @@ function initializeGame() {
   $('#playGame').prop('disabled', false);
 
   setHomePlanet();
+
   playerScore = 0;
   $('#playerName').val('');
   $('#enteredPlayerName').val('').attr('placeholder', 'What\'s your name?');
@@ -90,10 +91,16 @@ function initializeGame() {
 
 function setHomePlanet() {
   gameTargets = document.getElementsByClassName('gameTargets');
-  // winning house is assigned random number (0,1,2)
-  winningHouse = Math.floor(Math.random() * gameTargets.length);
-  console.log($(gameTargets[winningHouse]).attr('id'));
+  // winningHouse is always the Earth target by id
+  for (let i = 0; i < gameTargets.length; i++) {
+    if (gameTargets[i].id === 'earth') {
+      winningHouse = i;
+      break;
+    }
+  }
+  console.log("Winning target set to:", $(gameTargets[winningHouse]).attr('id'));
 }
+
 
 function greetPlayer() {
   const enteredPlayerName = $('#enteredPlayerName').val();
