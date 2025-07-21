@@ -41,55 +41,57 @@
 
   <div class="container-fluid vh-100">
     <!-- 1st row: game controls -->
-    <div class="row m-1 p-3">
-      <div class="col-md-10 shadow">
+    <div class="row m-1 p-3 d-flex justify-content-between align-items-center">
+      <div class="col-auto shadow">
         <div class="d-flex m-2">
-
           <!-- #1 enter player name -->
-          <div id="inputBox" class="d-flex justify-content-center">
-            <span class="input-group-text"> Enter Player Name:</span>
+          <div id="inputBox" class="d-flex justify-content-center bg-dark p-2">
+            <span class="input-group-text "> Enter Player Name:</span>
             <input id="enteredPlayerName" class="form-control" placeholder="what's your name?" />
-            <button id="submitPlayerName" class="btn btn-primary btn-md">submit</button>
+            <button id="submitPlayerName" class="btn btn-success btn-md">submit</button>
           </div>
 
           <!-- #2 greeting -->
-          <div id="nameBox" class="d-flex">
+          <div id="nameBox" class="d-flex bg-dark p-2">
             <span id="displayPlayerName" class="input-group-text"></span>
-            <button id="playGame" type="button" class="btn btn-warning">Play!</button>
+            <button id="playGame" type="button" class="btn btn-success">Play!</button>
           </div>
 
           <!-- #3 drag rocket -->
-          <div id="goBox" class="d-flex">
+          <div id="goBox" class="d-flex bg-dark p-2">
             <span class="input-group-text"> Drag the rocket to Earth!</span>
           </div>
-
         </div>
+
         <span class="float-end align-bottom">
           <a id="resetGame" class="fst-italic" href="#">reset</a>
         </span>
-      </div><!-- closes rules cols -->
+      </div><!-- closes controls col -->
 
-      <div class="col-md-2 shadow">
-        <!-- Score Box -->
-        <div class="d-flex flex-column align-items-center justify-content-center bg-light ms-auto"
-          style="width: 90px; height: 90px; min-width: 90px;">
-          <span class="fw-bold fs-5">Score</span>
-          <span class="fs-4"><span id="playerScore">0</span></span>
-          <button id="playAgain" type="button" class="btn btn-warning btn-sm mt-1">play again</button>
+      <div class="col-auto shadow ms-auto">
+        <div id="scoreBox" class="d-flex flex-row align-items-center justify-content-end bg-dark p-2"
+          style="width: 150px; height: 90px; min-width: 150px;">
+          <div class="me-3 text-center">
+            <div class="fw-bold fs-5">Score</div>
+            <div class="fs-4"><span id="playerScore">0</span></div>
+          </div>
+          <button id="playAgain" type="button" class="btn btn-success btn-sm">play again</button>
         </div>
       </div><!-- closes score col -->
     </div><!-- closes game control row -->
 
+
+
     <!-- 2nd row: game board -->
-    <div class="row m-4 h-75 border border-3 border-info rounded-3">
+    <div class="row m-4 h-75 border border-3 border-success rounded-3">
       <!-- the game board-->
       <div id="gameBoard" class="col-md-12 h-100">
 
         <!-- three targets -->
         <div class="h-100 d-flex flex-column align-items-end gap-3 justify-content-center pe-5">
-          <img class="gameTargets rounded h-25 w-15" src="images/Earth.png" alt="Target 1" />
-          <img class="gameTargets rounded h-25 w-15" src="images/Mars.png" alt="Target 2" />
-          <img class="gameTargets rounded h-25 w-15" src="images/Jupiter.png" alt="Target 3" />
+          <img id="earth" class="gameTargets rounded h-25 w-15" src="images/Earth.png" alt="Target Earth" />
+          <img id="moon" class="gameTargets rounded h-25 w-15" src="images/Moon.png" alt="Target Moon" />
+          <img id="mars" class="gameTargets rounded h-25 w-15" src="images/Mars.png" alt="Target Mars" />
         </div>
 
         <!-- game piece -->
@@ -100,18 +102,20 @@
   </div> <!-- closes big container -->
 
   <!-- footer -->
-  <footer class="bg-body-tertiary text-center text-lg-start mt-4">
-    <div class="text-center p-3" style="background-color: rgba(0,0,0,0.05);">
-      © 2025 Copyright
-      <a class="text-body" href="https://pittsoccer.github.io/pittsoccer/" target="_blank">bp|Dev</a> |
-      <a class="text-body" target="_blank" href="images/gameTimeWireframe.jpeg">wireframe</a> |
-      <a class="text-body" target="_blank"
+  <footer class="text-center text-lg-start bg-dark text-light mt-4">
+    <div class="text-center p-3">
+      © 2025 Bryce Pittman
+      <br />
+      <a class="text-light" href="https://pittsoccer.github.io/pittsoccer/" target="_blank">bp|Dev</a> |
+      <a class="text-light" target="_blank" href="images/gameTimeWireframe.jpeg">wireframe</a> |
+      <a class="text-light" target="_blank"
         href="https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fpittsoccer.github.io%2FSpaceGame%2F">check
         validity</a> |
-      <a class="text-body" target="_blank"
+      <a class="text-light" target="_blank"
         href="https://wave.webaim.org/report#/https://pittsoccer.github.io/SpaceGame/">check accessibility</a>
     </div>
   </footer>
+
 
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
