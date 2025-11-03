@@ -16,7 +16,7 @@
 
 <body style="margin:0;">
   <!-- nav bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark h-50 w-100">
+  <nav class="navbar navbar-expand-lg navbar-dark topnav h-50 w-100">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,11 +33,13 @@
           </li>
           <!-- SpaceGame link -->
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="https://pittsoccer.github.io/SpaceGame/">bp|SpaceGame</a>
+            <a class="nav-link active" aria-current="page"
+              href="https://pittsoccer.github.io/SpaceGame/">bp|SpaceGame</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li> -->
+          <!-- ciSalon link -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://pittsoccer.github.io/ciSalon/">bp|ciSalon</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -45,24 +47,23 @@
 
   <div class="container-fluid vh-100">
     <!-- 1st row: game controls -->
-    <div class="row m-1 p-3 d-flex justify-content-between align-items-center">
-      <div class="col-auto shadow">
+    <div class="row m-1 p-3 d-flex justify-content-between align-items-center ">
+      <div class="col-auto shadow border border-2 border-success rounded-3">
         <div class="d-flex m-2">
           <!-- #1 enter player name -->
-          <div id="inputBox" class="d-flex justify-content-center bg-dark p-2">
-            <span class="input-group-text "> Enter Player Name:</span>
+          <div id="inputBox" class="d-flex justify-content-center p-2">
             <input id="enteredPlayerName" class="form-control" placeholder="what's your name?" />
             <button id="submitPlayerName" class="btn btn-success btn-md">submit</button>
           </div>
 
           <!-- #2 greeting -->
-          <div id="nameBox" class="d-flex bg-dark p-2">
+          <div id="nameBox" class="d-flex p-2">
             <span id="displayPlayerName" class="input-group-text"></span>
             <button id="playGame" type="button" class="btn btn-success">Play!</button>
           </div>
 
           <!-- #3 drag rocket -->
-          <div id="goBox" class="d-flex bg-dark p-2">
+          <div id="goBox" class="d-flex p-2">
             <span class="input-group-text"> Drag the rocket to Earth!</span>
           </div>
         </div>
@@ -73,7 +74,8 @@
       </div><!-- closes controls col -->
 
       <div class="col-auto shadow ms-auto">
-        <div id="scoreBox" class="d-flex flex-row align-items-center justify-content-end bg-dark p-2"
+        <div id="scoreBox"
+          class="d-flex flex-row align-items-center justify-content-end border border-2 border-success rounded-3 p-2"
           style="width: 150px; height: 90px; min-width: 150px;">
           <div class="me-3 text-center">
             <div class="fw-bold fs-5">Score</div>
@@ -106,7 +108,7 @@
   </div> <!-- closes big container -->
 
   <!-- footer -->
-  <footer class="text-center text-lg-start bg-dark text-light mt-4">
+  <footer class="text-center text-lg-start footer text-light mt-4">
     <div class="text-center p-3">
       © 2025 Bryce Pittman
       <br />
@@ -136,6 +138,3 @@
 </body>
 
 </html>
-
-
-
