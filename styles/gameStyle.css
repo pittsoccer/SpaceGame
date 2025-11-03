@@ -1,6 +1,16 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+/* 
+~~~~~ Alien Invasion Palette ~~~~~
+  Brand:    #59E881
+  Darkest:  #262335
+  Dark:     #433E5A
+  Mid:      #6D59C0
+  Light:    #DDDAE8
+  Lightest: #FFFFFF
+*/
+
 #gameBoard {
   position: relative;
   background-image: url("../images/SpaceBackground2.jpg");
@@ -18,6 +28,7 @@
 
 #scoreBoxFixed {
   position: fixed;
+  color: #262335;
   top: 20px;
   /* distance from top of viewport */
   right: 0;
@@ -40,9 +51,48 @@
   text-align: center;
 }
 
+/* Add a background color to the top navigation */
+.topnav {
+  background-color: #262335;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #e6ecf3;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #6D59C0;
+  color: white;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
   color: #24b50b;
   /* background-color: #0C0A1F; */
   background-color: #06040F;
+}
+
+/* Footer style */
+footer {
+  background-color: #262335;
+  color: #fff;
+  padding: 1px 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
